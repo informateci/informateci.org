@@ -1,0 +1,107 @@
+11:54:49=>projectManager 1.0.7.1 started!
+11:54:49=>PluginPath: C:\MyNet\IDE\PHPEdit\1.0\Plugins\ProjectManager
+11:54:49=>StoragePath submitted from PHPEdit: C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\
+11:54:49=>used StoragePath: C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager
+11:54:49=>PhpEdit.ini-path: C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\phpedit.ini found
+11:54:49=>projectManagerDll-path: C:\MyNet\IDE\PHPEdit\1.0\Plugins\ProjectManager\projectManager.dll
+11:54:49=>Reading options from C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI
+11:54:49=>Reading options from C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\phpedit.ini
+11:54:49=>Reading option [bShowCVSDirs] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = false
+11:54:49=>Reading option [bConfirmDelete] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = true
+11:54:49=>Reading option [uiHidingTimer] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = 2500
+11:54:49=>Reading option [bNoCollapse] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = false
+11:54:49=>Reading option [bIsChildWnd] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = true
+11:54:49=>Reading option [bCheckOutOnOpen] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = false
+11:54:49=>Reading option [nMRUFiles] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = 8
+!WARNING:11:54:49=>Reading option [defaultTRLocation] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [defaultHGLocation] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [defaultTRTemplateSetLocation] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [defaultHGTemplateSetLocation] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+11:54:49=>Reading option [defaultIncludeFilter] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = php;html;css;js
+11:54:49=>Reading option [defaultExcludeFilter] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = scc;prj
+!WARNING:11:54:49=>Reading option [defaultFTPServer] of section [FTP] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [defaultFTPUserName] of section [FTP] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [defaultFTPPassword] of section [FTP] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [defaultFTPStartupDir] of section [FTP] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+11:54:49=>Reading option [defaultFTPPort] of section [FTP] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = 21
+11:54:49=>Reading option [nURLFiles] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = 8
+11:54:49=>Reading option [nTaskFiles] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = 8
+11:54:49=>Reading option [nSnippetFiles] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = 8
+11:54:49=>Reading option [nActionFiles] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = 8
+11:54:49=>Reading option [nToolFiles] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = 8
+11:54:49=>Reading option [treeViewHeight] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = -1
+11:54:49=>Reading option [urlTreeViewHeight] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = -1
+11:54:49=>Reading option [tasksViewHeight] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = -1
+11:54:49=>Reading option [snippetsViewHeight] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = -1
+11:54:49=>Reading option [actionsViewHeight] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = -1
+11:54:49=>Reading option [toolsViewHeight] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = 100
+11:54:49=>Reading option [bFilesSortOrder] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = true
+11:54:49=>Reading option [iFilesSortColumn] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = 1
+11:54:49=>Reading option [iFilesColWidth1] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = 182
+11:54:49=>Reading option [iFilesColWidth2] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = 77
+11:54:49=>Reading option [iFilesColWidth3] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = 51
+11:54:49=>Reading option [iFilesColWidth4] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = 120
+11:54:49=>Reading option [bTasksSortOrder] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = true
+11:54:49=>Reading option [iTasksSortColumn] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = 0
+11:54:49=>Reading option [iTasksColWidth1] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = 58
+11:54:49=>Reading option [iTasksColWidth2] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = 95
+11:54:49=>Reading option [iTasksColWidth3] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = 120
+11:54:49=>Reading option [MainWndTop] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = 108
+11:54:49=>Reading option [MainWndLeft] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = 786
+11:54:49=>Reading option [MainWndRight] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = 1031
+11:54:49=>Reading option [MainWndBottom] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = 763
+!WARNING:11:54:49=>Reading option [0] of section [MRU-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [1] of section [MRU-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [2] of section [MRU-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [3] of section [MRU-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [4] of section [MRU-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [5] of section [MRU-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [6] of section [MRU-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [7] of section [MRU-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [0] of section [URL-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [1] of section [URL-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [2] of section [URL-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [3] of section [URL-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [4] of section [URL-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [5] of section [URL-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [6] of section [URL-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [7] of section [URL-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [0] of section [Task-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [1] of section [Task-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [2] of section [Task-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [3] of section [Task-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [4] of section [Task-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [5] of section [Task-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [6] of section [Task-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [7] of section [Task-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [0] of section [Snippet-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [1] of section [Snippet-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [2] of section [Snippet-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [3] of section [Snippet-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [4] of section [Snippet-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [5] of section [Snippet-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [6] of section [Snippet-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [7] of section [Snippet-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [0] of section [Action-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [1] of section [Action-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [2] of section [Action-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [3] of section [Action-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [4] of section [Action-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [5] of section [Action-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [6] of section [Action-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [7] of section [Action-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [0] of section [Tool-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [1] of section [Tool-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [2] of section [Tool-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [3] of section [Tool-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [4] of section [Tool-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [5] of section [Tool-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [6] of section [Tool-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+!WARNING:11:54:49=>Reading option [7] of section [Tool-Files] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] failed! use default = 
+11:54:49=>Reading option [language] of section [Options] from file [C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\ProjectManager.INI] value = English (English)
+11:54:49=>XML::init succeeded with code 0
+11:54:49=>Creating document ... done
+11:54:50=>Creating frame window ... done
+11:54:50=>phpEditWindow-title: PHPEdit v1.0.4.82, window found
+11:54:50=>Try reading browsers from C:\Documents And Settings\Vavan\Application Data\WaterProof\PHPEdit\1.0\plugins\ProjectManager\browsers.xml
+!WARNING:11:54:50=>Reading browsers ... failed

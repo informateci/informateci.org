@@ -1,0 +1,25 @@
+#########################################################################
+#
+# Required Variables
+#
+#    These are required for your hack to be auto-inserted
+#########################################################################
+
+Name = "Color Groups"
+Description = "This mod will replace the current name colorization with a group system."
+Author = "Nivisec"
+
+#########################################################################
+#
+# Optional Variables
+#
+#    These are optional.  To have it ignored, use "" as the entry.
+#
+#    Author Email may be in the form of user@host.com or
+#    user at host dot com and work fine with either.
+#########################################################################
+
+Version = "1.2.0"
+Download_URL = "http://www.nivisec.com/phpbb.php?l=p"
+Author_EMAIL = "support@nivisec.com"
+Author_WEB = "http://www.nivisec.com"

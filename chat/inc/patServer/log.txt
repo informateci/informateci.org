@@ -1,0 +1,5326 @@
+
+//-----------------------------------------------------
+//----GLOBALS
+//-----------------------------------------------------
+2
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_connections
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----GLOBALS
+//-----------------------------------------------------
+2
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_connections
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id, ispermanent FROM flashchat_rooms
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [ispermanent] => 1
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [ispermanent] => 2
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [ispermanent] => 3
+        )
+
+    [3] => Array
+        (
+            [id] => 4
+            [ispermanent] => 4
+        )
+
+    [4] => Array
+        (
+            [id] => 5
+            [ispermanent] => 
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 07c6d984df0bdfa0a5d10716b8e6273a
+    [2] => 
+    [3] => 
+    [4] => lout
+    [5] => 
+    [6] => 
+    [7] => login
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_connections (id, updated, created, userid, roomid, color, state, start, lang, ip) VALUES (?, NOW(), NOW(), ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 07c6d984df0bdfa0a5d10716b8e6273a
+    [1] => 
+    [2] => 1
+    [3] => 16777215
+    [4] => 1
+    [5] => 167
+    [6] => en
+    [7] => 127.0.0.1
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_connections SET updated=NOW(), userid=?, roomid=?, color=?, state=?, start=?, lang=?, ip=?, tzoffset=? WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 1
+    [2] => 16777215
+    [3] => 1
+    [4] => 167
+    [5] => en
+    [6] => 127.0.0.1
+    [7] => -180
+    [8] => 07c6d984df0bdfa0a5d10716b8e6273a
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms,flashchat_connections SET flashchat_rooms.updated=NOW() WHERE flashchat_rooms.id = flashchat_connections.roomid
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id FROM flashchat_rooms WHERE ispermanent IS NULL AND updated < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 30
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [id] => 5
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => rmr
+    [5] => 
+    [6] => 5
+    [7] => 
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_rooms WHERE ispermanent IS NULL AND id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 5
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_messages WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 86400
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_bans WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 36000
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_users WHERE login=? LIMIT 1
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => w1
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [id] => 2
+            [login] => w1
+            [password] => 
+            [roles] => 8
+            [profile] => 
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_users SET roles=? WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 1
+    [1] => 2
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id, ispermanent FROM flashchat_rooms
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [ispermanent] => 1
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [ispermanent] => 2
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [ispermanent] => 3
+        )
+
+    [3] => Array
+        (
+            [id] => 4
+            [ispermanent] => 4
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id, ip FROM flashchat_connections WHERE userid=? AND id<>?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 2
+    [1] => 07c6d984df0bdfa0a5d10716b8e6273a
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT COUNT(*) as cnt FROM flashchat_connections WHERE ip=? AND userid IS NOT NULL
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 127.0.0.1
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [cnt] => 0
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_users WHERE id=? LIMIT 1
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 2
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [id] => 2
+            [login] => w1
+            [password] => 
+            [roles] => 8
+            [profile] => 
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_users WHERE id=? LIMIT 1
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 2
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [id] => 2
+            [login] => w1
+            [password] => 
+            [roles] => 8
+            [profile] => 
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_bans WHERE (banneduserid=? OR ip=?) AND roomid IS NULL
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 2
+    [1] => 127.0.0.1
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_bans WHERE banneduserid=? AND roomid IS NOT NULL
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 2
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_users WHERE id=? LIMIT 1
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 2
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [id] => 2
+            [login] => w1
+            [password] => 
+            [roles] => 8
+            [profile] => 
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 07c6d984df0bdfa0a5d10716b8e6273a
+    [2] => 
+    [3] => 
+    [4] => lng
+    [5] => 
+    [6] => 
+    [7] => <language loaded="1" id="en" name="English"><messages  ignored="'USER_LABEL' is ignoring your messages" banned="You've been banned" login="Please login to the chat" wrongPass="Incorrect user name or password. Please try again." required="required" anotherlogin="Another user is logged in with this user name. Please try again." expiredlogin="Your connection has expired. Please re-login." enterroom="[ROOM_LABEL]: USER_LABEL has entered at TIMESTAMP" leaveroom="[ROOM_LABEL]: USER_LABEL has left at TIMESTAMP" selfenterroom="Welcome! You have entered [ROOM_LABEL] at TIMESTAMP" bellrang="USER_LABEL rang the bell" chatfull="The chat is full. Please try again later." iplimit="You are already in the chat." roomlock="This room is password protected.&lt;br&gt;Please enter the room password:" locked="Invalid password. Please try again." botfeat="The bot feature is not currently enabled." securityrisk="The file that you uploaded may contain scripting elements, which could pose a security risk. Please try another file."/><desktop  invalidsettings="Invalid settings" selectsmile="Smilies" sendBtn="Send" saveBtn="Save" clearBtn="Clear" skinBtn="Options" addRoomBtn="Add" myStatus="My status" room="Room" welcome="Welcome USER_LABEL" ringTheBell="No Answer? Ring The Bell:" logOffBtn="X" helpBtn="?" adminSign=""/><dialog id="misc"  roomnotfound="Room 'ROOM_LABEL' not found" usernotfound="User 'USER_LABEL' not found" unbanned="You were un-banned by user 'USER_LABEL'" banned="You were banned by user 'USER_LABEL'" unignored="You were un-ignored by user 'USER_LABEL'" ignored="You were ignored by user 'USER_LABEL'" invitationdeclined="User 'USER_LABEL' declined your invitation to room 'ROOM_LABEL'" invitationaccepted="User 'USER_LABEL' accepted your invitation to room 'ROOM_LABEL'" roomnotcreated="Room was not created" roomisfull="[ROOM_LABEL] is full. Please choose another room." alert="&lt;b&gt;ALERT!&lt;/b&gt;&lt;br&gt;" chatalert="&lt;b&gt;ALERT!&lt;/b&gt;&lt;br&gt;" gag="&lt;b&gt;You've been gagged for DURATION minute(s)!&lt;/b&gt;&lt;br&gt;&lt;br&gt;You may view messages in this room, but not contribute new messages to the conversation, until the gag expires." ungagged="You were un-gagged by user 'USER_LABEL'" gagconfirm="USER_LABEL is gagged for MINUTES minute(s)." alertconfirm="USER_LABEL has read the alert." file_declined="Your file was declined by USER_LABEL." file_accepted="Your file was accepted by USER_LABEL."/><dialog id="unignore"  unignoreBtn="Un-ignore" unignoretext="Enter un-ignore text"/><dialog id="unban"  unbanBtn="Un-ban" unbantext="Enter un-ban text"/><dialog id="tablabels"  themes="Themes" sounds="Sounds" text="Text" effects="Effects" admin="Admin" about="About"/><dialog id="text"  itemChange="Item to Change" fontSize="Font Size" fontFamily="Font Family" language="Language" mainChat="Main Chat" interfaceElements="Interface Elements" title="Title" mytextcolor="Use my text color for all received messages."/><dialog id="effects"  avatars="Avatars" photo="Photo" mainchat="Main chat" roomlist="Room list" background="Background" custom="Custom" showBackgroundImages="Show background" splashWindow="Focus window on new message" uiAlpha="Transparency"/><dialog id="sound"  sampleBtn="Sample" testBtn="Test" muteall="Mute all" submitmessage="Submit message" reveivemessage="Receive message" enterroom="Enter room" leaveroom="Leave room" pan="Pan" volume="Volume" initiallogin="Initial login" logout="Logout" privatemessagereceived="Receive private message" invitationreceived="Receive invitation" combolistopenclose="Open/close combobox list" userbannedbooted="User banned or booted" usermenumouseover="User menu mouse over" roomopenclose="Open/close room section" popupwindowopen="Popup window opens" popupwindowclosemin="Popup window closes" pressbutton="Key press" otheruserenters="Other user enters room"/><dialog id="skin"  inputBoxBackground="Input box background" privateLogBackground="Private log background" publicLogBackground="Public log background" enterRoomNotify="Enter room notification" roomText="Rooms text" room="Rooms background" userListBackground="User list background" dialogTitle="Dialog title" dialog="Dialog background" buttonText="Buttons text" button="Buttons background" bodyText="Body text" background="Main background" borderColor="Border color" selectskin="Select Color Scheme..." buttonBorder="Buttons border color" selectBigSkin="Select Skin..." titleText="Title text"/><dialog id="privateBox"  sendBtn="Send" toUser="Talking to USER_LABEL:"/><dialog id="login"  loginBtn="Login" language="Language:" moderator="(if moderator)" password="Password:" username="User name:"/><dialog id="invitenotify"  declineBtn="Decline" acceptBtn="Accept" userinvited="'USER_LABEL' has invited you to chat in 'ROOM_LABEL'"/><dialog id="invite"  sendBtn="Send" includemessage="Include this message with your invitation:" inviteto="Invite user to:"/><dialog id="ignore"  ignoreBtn="Ignore" ignoretext="Enter ignore text"/><dialog id="createroom"  createBtn="Create" private="Private" public="Public" entername="Enter room name" enterpass="Enter a room password or leave blank to allow access without password."/><dialog id="ban"  banBtn="Ban" byIP="by IP" fromChat="from chat" fromRoom="from room" banText="Enter ban text"/><dialog id="common"  cancelBtn="Cancel" okBtn="OK" win_choose="Choose the file to upload:" win_upl_btn="  Upload  " upl_error="File uploading error" pls_select_file="Please select a file to upload" ext_not_allowed="The FILE_EXT file extension is not allowed. Please choose a file with one of the these extensions: ALLOWED_EXT" size_too_big="The file that you have attempted to share exceeds the maximum allowed file size. Please try again."/><dialog id="sharefile"  chat_users="[ Share To Chat ]" all_users="[ Share To Room ]" file_info_size="&lt;br&gt;The maximum allowed size of this file MAX_SIZE." file_info_ext=" Allowed File Types: ALLOWED_EXT" win_share_only="Share with" usr_message="&lt;b&gt;USER_LABEL wants to share a file with you&lt;/b&gt;&lt;br&gt;&lt;br&gt;File name: F_NAME&lt;br&gt;File size: F_SIZE"/><dialog id="loadavatarbg"  win_title="Custom Background" file_info="Your file should be a non-progressive JPG image." use_label="Use this file for:" rb_mainchat_avatar="Main chat avatar only" rb_roomlist_avatar="Room list avatar only" rb_mc_rl_avatar="Both main chat and room list avatars" rb_this_theme="Background for this theme only" rb_all_themes="Background for all themes"/><dialog id="loadphoto"  win_title="Custom User Photo" file_info="Your file should be a non-progressive JPG image, GIF image, PNG image."/><status  here="Here" busy="Busy" away="Away" brb="BRB"/><usermenu  profile="Profile" unban="Un-ban" ban="Ban" unignore="Un-ignore" fileshare="Share File" ignore="Ignore" invite="Invite" privatemessage="Private message"/></language>
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 07c6d984df0bdfa0a5d10716b8e6273a
+    [2] => 
+    [3] => 
+    [4] => lin
+    [5] => 2
+    [6] => 8
+    [7] => en
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_rooms WHERE name=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => Support Room for w1
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_rooms (created, name, password, ispublic) VALUES (NOW(), ?,?,?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => Support Room for w1
+    [1] => 
+    [2] => y
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => adr
+    [5] => 
+    [6] => 6
+    [7] => Support Room for w1
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_rooms
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [updated] => 2007-04-17 12:15:20
+            [created] => 2007-04-17 12:15:20
+            [name] => The Lounge
+            [password] => 
+            [ispublic] => 
+            [ispermanent] => 1
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [updated] => 2007-04-17 12:15:20
+            [created] => 2007-04-17 12:15:20
+            [name] => Hollywood
+            [password] => 
+            [ispublic] => 
+            [ispermanent] => 2
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [updated] => 2007-04-17 12:15:20
+            [created] => 2007-04-17 12:15:20
+            [name] => Tech Talk
+            [password] => 
+            [ispublic] => 
+            [ispermanent] => 3
+        )
+
+    [3] => Array
+        (
+            [id] => 4
+            [updated] => 2007-04-17 12:15:20
+            [created] => 2007-04-17 12:15:20
+            [name] => Current Events
+            [password] => 
+            [ispublic] => 
+            [ispermanent] => 4
+        )
+
+    [4] => Array
+        (
+            [id] => 6
+            [updated] => 2007-04-17 12:45:09
+            [created] => 2007-04-17 12:45:09
+            [name] => Support Room for w1
+            [password] => 
+            [ispublic] => 
+            [ispermanent] => 
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_rooms WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 6
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 07c6d984df0bdfa0a5d10716b8e6273a
+    [2] => 
+    [3] => 
+    [4] => adr
+    [5] => 
+    [6] => 6
+    [7] => Support Room for w1
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_connections WHERE id<>? AND userid IS NOT NULL
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 07c6d984df0bdfa0a5d10716b8e6273a
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => adu
+    [5] => 2
+    [6] => 6
+    [7] => w1
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => uclc
+    [5] => 2
+    [6] => 
+    [7] => 16777215
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => ustc
+    [5] => 2
+    [6] => 
+    [7] => 1
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_ignors WHERE userid=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 2
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_connections SET updated=NOW(), userid=?, roomid=?, color=?, state=?, start=?, lang=?, ip=?, tzoffset=? WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 2
+    [1] => 6
+    [2] => 16777215
+    [3] => 1
+    [4] => 169
+    [5] => en
+    [6] => 127.0.0.1
+    [7] => -180
+    [8] => 07c6d984df0bdfa0a5d10716b8e6273a
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms,flashchat_connections SET flashchat_rooms.updated=NOW() WHERE flashchat_rooms.id = flashchat_connections.roomid
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id FROM flashchat_rooms WHERE ispermanent IS NULL AND updated < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 30
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_messages WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 86400
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_bans WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 36000
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms SET updated=NOW() WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 6
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => spht
+    [5] => 2
+    [6] => 
+    [7] => 
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms SET updated=NOW() WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 6
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => uclc
+    [5] => 2
+    [6] => 
+    [7] => 16777215
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_connections SET updated=NOW(), userid=?, roomid=?, color=?, state=?, start=?, lang=?, ip=?, tzoffset=? WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 2
+    [1] => 6
+    [2] => 16777215
+    [3] => 1
+    [4] => 169
+    [5] => en
+    [6] => 127.0.0.1
+    [7] => -180
+    [8] => 07c6d984df0bdfa0a5d10716b8e6273a
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms SET updated=NOW() WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 6
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => spht
+    [5] => 2
+    [6] => 
+    [7] => 
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms SET updated=NOW() WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 6
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 6
+    [4] => msg
+    [5] => 2
+    [6] => 6
+    [7] => gt soipeh rpgoisherpgoser
+)
+
+//-----------------------------------------------------
+//----id
+//-----------------------------------------------------
+179
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms,flashchat_connections SET flashchat_rooms.updated=NOW() WHERE flashchat_rooms.id = flashchat_connections.roomid
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id FROM flashchat_rooms WHERE ispermanent IS NULL AND updated < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 30
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_messages WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 86400
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_bans WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 36000
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms SET updated=NOW() WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 6
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 6
+    [4] => msg
+    [5] => 2
+    [6] => 6
+    [7] => se rgihspeorih gpoiserh gpoise
+)
+
+//-----------------------------------------------------
+//----id
+//-----------------------------------------------------
+180
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms SET updated=NOW() WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 6
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 6
+    [4] => msg
+    [5] => 2
+    [6] => 6
+    [7] => se oighspeorihg posieh pogse
+)
+
+//-----------------------------------------------------
+//----id
+//-----------------------------------------------------
+181
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms,flashchat_connections SET flashchat_rooms.updated=NOW() WHERE flashchat_rooms.id = flashchat_connections.roomid
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id FROM flashchat_rooms WHERE ispermanent IS NULL AND updated < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 30
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_messages WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 86400
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_bans WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 36000
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms SET updated=NOW() WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 6
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 6
+    [4] => msg
+    [5] => 2
+    [6] => 6
+    [7] => seg oisehprogih seoihgseihr ghsieporg se
+)
+
+//-----------------------------------------------------
+//----id
+//-----------------------------------------------------
+182
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms SET updated=NOW() WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 6
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 6
+    [4] => msg
+    [5] => 2
+    [6] => 6
+    [7] => g iheproghs eroih gosiehr goihserpoigh sperih gposeirg
+)
+
+//-----------------------------------------------------
+//----id
+//-----------------------------------------------------
+183
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms,flashchat_connections SET flashchat_rooms.updated=NOW() WHERE flashchat_rooms.id = flashchat_connections.roomid
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id FROM flashchat_rooms WHERE ispermanent IS NULL AND updated < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 30
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_messages WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 86400
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_bans WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 36000
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms SET updated=NOW() WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 6
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 6
+    [4] => msg
+    [5] => 2
+    [6] => 6
+    [7] => ser gsoierhg poishe goihseporihg posierhpg oihsepoighspeoirhg posierg
+)
+
+//-----------------------------------------------------
+//----id
+//-----------------------------------------------------
+184
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms SET updated=NOW() WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 6
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 6
+    [4] => msg
+    [5] => 2
+    [6] => 6
+    [7] => sregoisehrp goisherp
+)
+
+//-----------------------------------------------------
+//----id
+//-----------------------------------------------------
+185
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms,flashchat_connections SET flashchat_rooms.updated=NOW() WHERE flashchat_rooms.id = flashchat_connections.roomid
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id FROM flashchat_rooms WHERE ispermanent IS NULL AND updated < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 30
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_messages WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 86400
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_bans WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 36000
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms SET updated=NOW() WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 6
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 07c6d984df0bdfa0a5d10716b8e6273a
+    [2] => 
+    [3] => 
+    [4] => lout
+    [5] => 
+    [6] => 
+    [7] => login
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => rmu
+    [5] => 2
+    [6] => 
+    [7] => 
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id, ispermanent FROM flashchat_rooms
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [ispermanent] => 1
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [ispermanent] => 2
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [ispermanent] => 3
+        )
+
+    [3] => Array
+        (
+            [id] => 4
+            [ispermanent] => 4
+        )
+
+    [4] => Array
+        (
+            [id] => 6
+            [ispermanent] => 
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_connections SET updated=NOW(), userid=?, roomid=?, color=?, state=?, start=?, lang=?, ip=?, tzoffset=? WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 1
+    [2] => 16777215
+    [3] => 1
+    [4] => 169
+    [5] => en
+    [6] => 127.0.0.1
+    [7] => -180
+    [8] => 07c6d984df0bdfa0a5d10716b8e6273a
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms,flashchat_connections SET flashchat_rooms.updated=NOW() WHERE flashchat_rooms.id = flashchat_connections.roomid
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id FROM flashchat_rooms WHERE ispermanent IS NULL AND updated < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 30
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_messages WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 86400
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_bans WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 36000
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_users WHERE login=? LIMIT 1
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => w21
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_users (login, roles) VALUES(?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => w21
+    [1] => 1
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id, ispermanent FROM flashchat_rooms
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [ispermanent] => 1
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [ispermanent] => 2
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [ispermanent] => 3
+        )
+
+    [3] => Array
+        (
+            [id] => 4
+            [ispermanent] => 4
+        )
+
+    [4] => Array
+        (
+            [id] => 6
+            [ispermanent] => 
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id, ip FROM flashchat_connections WHERE userid=? AND id<>?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 3
+    [1] => 07c6d984df0bdfa0a5d10716b8e6273a
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT COUNT(*) as cnt FROM flashchat_connections WHERE ip=? AND userid IS NOT NULL
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 127.0.0.1
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [cnt] => 0
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_users WHERE id=? LIMIT 1
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 3
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [id] => 3
+            [login] => w21
+            [password] => 
+            [roles] => 1
+            [profile] => 
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_users WHERE id=? LIMIT 1
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 3
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [id] => 3
+            [login] => w21
+            [password] => 
+            [roles] => 1
+            [profile] => 
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_bans WHERE (banneduserid=? OR ip=?) AND roomid IS NULL
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 3
+    [1] => 127.0.0.1
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_bans WHERE banneduserid=? AND roomid IS NOT NULL
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 3
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_users WHERE id=? LIMIT 1
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 3
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [id] => 3
+            [login] => w21
+            [password] => 
+            [roles] => 1
+            [profile] => 
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 07c6d984df0bdfa0a5d10716b8e6273a
+    [2] => 
+    [3] => 
+    [4] => lng
+    [5] => 
+    [6] => 
+    [7] => <language loaded="1" id="en" name="English"><messages  ignored="'USER_LABEL' is ignoring your messages" banned="You've been banned" login="Please login to the chat" wrongPass="Incorrect user name or password. Please try again." required="required" anotherlogin="Another user is logged in with this user name. Please try again." expiredlogin="Your connection has expired. Please re-login." enterroom="[ROOM_LABEL]: USER_LABEL has entered at TIMESTAMP" leaveroom="[ROOM_LABEL]: USER_LABEL has left at TIMESTAMP" selfenterroom="Welcome! You have entered [ROOM_LABEL] at TIMESTAMP" bellrang="USER_LABEL rang the bell" chatfull="The chat is full. Please try again later." iplimit="You are already in the chat." roomlock="This room is password protected.&lt;br&gt;Please enter the room password:" locked="Invalid password. Please try again." botfeat="The bot feature is not currently enabled." securityrisk="The file that you uploaded may contain scripting elements, which could pose a security risk. Please try another file."/><desktop  invalidsettings="Invalid settings" selectsmile="Smilies" sendBtn="Send" saveBtn="Save" clearBtn="Clear" skinBtn="Options" addRoomBtn="Add" myStatus="My status" room="Room" welcome="Welcome USER_LABEL" ringTheBell="No Answer? Ring The Bell:" logOffBtn="X" helpBtn="?" adminSign=""/><dialog id="misc"  roomnotfound="Room 'ROOM_LABEL' not found" usernotfound="User 'USER_LABEL' not found" unbanned="You were un-banned by user 'USER_LABEL'" banned="You were banned by user 'USER_LABEL'" unignored="You were un-ignored by user 'USER_LABEL'" ignored="You were ignored by user 'USER_LABEL'" invitationdeclined="User 'USER_LABEL' declined your invitation to room 'ROOM_LABEL'" invitationaccepted="User 'USER_LABEL' accepted your invitation to room 'ROOM_LABEL'" roomnotcreated="Room was not created" roomisfull="[ROOM_LABEL] is full. Please choose another room." alert="&lt;b&gt;ALERT!&lt;/b&gt;&lt;br&gt;" chatalert="&lt;b&gt;ALERT!&lt;/b&gt;&lt;br&gt;" gag="&lt;b&gt;You've been gagged for DURATION minute(s)!&lt;/b&gt;&lt;br&gt;&lt;br&gt;You may view messages in this room, but not contribute new messages to the conversation, until the gag expires." ungagged="You were un-gagged by user 'USER_LABEL'" gagconfirm="USER_LABEL is gagged for MINUTES minute(s)." alertconfirm="USER_LABEL has read the alert." file_declined="Your file was declined by USER_LABEL." file_accepted="Your file was accepted by USER_LABEL."/><dialog id="unignore"  unignoreBtn="Un-ignore" unignoretext="Enter un-ignore text"/><dialog id="unban"  unbanBtn="Un-ban" unbantext="Enter un-ban text"/><dialog id="tablabels"  themes="Themes" sounds="Sounds" text="Text" effects="Effects" admin="Admin" about="About"/><dialog id="text"  itemChange="Item to Change" fontSize="Font Size" fontFamily="Font Family" language="Language" mainChat="Main Chat" interfaceElements="Interface Elements" title="Title" mytextcolor="Use my text color for all received messages."/><dialog id="effects"  avatars="Avatars" photo="Photo" mainchat="Main chat" roomlist="Room list" background="Background" custom="Custom" showBackgroundImages="Show background" splashWindow="Focus window on new message" uiAlpha="Transparency"/><dialog id="sound"  sampleBtn="Sample" testBtn="Test" muteall="Mute all" submitmessage="Submit message" reveivemessage="Receive message" enterroom="Enter room" leaveroom="Leave room" pan="Pan" volume="Volume" initiallogin="Initial login" logout="Logout" privatemessagereceived="Receive private message" invitationreceived="Receive invitation" combolistopenclose="Open/close combobox list" userbannedbooted="User banned or booted" usermenumouseover="User menu mouse over" roomopenclose="Open/close room section" popupwindowopen="Popup window opens" popupwindowclosemin="Popup window closes" pressbutton="Key press" otheruserenters="Other user enters room"/><dialog id="skin"  inputBoxBackground="Input box background" privateLogBackground="Private log background" publicLogBackground="Public log background" enterRoomNotify="Enter room notification" roomText="Rooms text" room="Rooms background" userListBackground="User list background" dialogTitle="Dialog title" dialog="Dialog background" buttonText="Buttons text" button="Buttons background" bodyText="Body text" background="Main background" borderColor="Border color" selectskin="Select Color Scheme..." buttonBorder="Buttons border color" selectBigSkin="Select Skin..." titleText="Title text"/><dialog id="privateBox"  sendBtn="Send" toUser="Talking to USER_LABEL:"/><dialog id="login"  loginBtn="Login" language="Language:" moderator="(if moderator)" password="Password:" username="User name:"/><dialog id="invitenotify"  declineBtn="Decline" acceptBtn="Accept" userinvited="'USER_LABEL' has invited you to chat in 'ROOM_LABEL'"/><dialog id="invite"  sendBtn="Send" includemessage="Include this message with your invitation:" inviteto="Invite user to:"/><dialog id="ignore"  ignoreBtn="Ignore" ignoretext="Enter ignore text"/><dialog id="createroom"  createBtn="Create" private="Private" public="Public" entername="Enter room name" enterpass="Enter a room password or leave blank to allow access without password."/><dialog id="ban"  banBtn="Ban" byIP="by IP" fromChat="from chat" fromRoom="from room" banText="Enter ban text"/><dialog id="common"  cancelBtn="Cancel" okBtn="OK" win_choose="Choose the file to upload:" win_upl_btn="  Upload  " upl_error="File uploading error" pls_select_file="Please select a file to upload" ext_not_allowed="The FILE_EXT file extension is not allowed. Please choose a file with one of the these extensions: ALLOWED_EXT" size_too_big="The file that you have attempted to share exceeds the maximum allowed file size. Please try again."/><dialog id="sharefile"  chat_users="[ Share To Chat ]" all_users="[ Share To Room ]" file_info_size="&lt;br&gt;The maximum allowed size of this file MAX_SIZE." file_info_ext=" Allowed File Types: ALLOWED_EXT" win_share_only="Share with" usr_message="&lt;b&gt;USER_LABEL wants to share a file with you&lt;/b&gt;&lt;br&gt;&lt;br&gt;File name: F_NAME&lt;br&gt;File size: F_SIZE"/><dialog id="loadavatarbg"  win_title="Custom Background" file_info="Your file should be a non-progressive JPG image." use_label="Use this file for:" rb_mainchat_avatar="Main chat avatar only" rb_roomlist_avatar="Room list avatar only" rb_mc_rl_avatar="Both main chat and room list avatars" rb_this_theme="Background for this theme only" rb_all_themes="Background for all themes"/><dialog id="loadphoto"  win_title="Custom User Photo" file_info="Your file should be a non-progressive JPG image, GIF image, PNG image."/><status  here="Here" busy="Busy" away="Away" brb="BRB"/><usermenu  profile="Profile" unban="Un-ban" ban="Ban" unignore="Un-ignore" fileshare="Share File" ignore="Ignore" invite="Invite" privatemessage="Private message"/></language>
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 07c6d984df0bdfa0a5d10716b8e6273a
+    [2] => 
+    [3] => 
+    [4] => lin
+    [5] => 3
+    [6] => 1
+    [7] => en
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_rooms WHERE ispublic IS NOT NULL AND ispermanent IS NOT NULL ORDER BY ispermanent
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [updated] => 2007-04-17 12:15:20
+            [created] => 2007-04-17 12:15:20
+            [name] => The Lounge
+            [password] => 
+            [ispublic] => 
+            [ispermanent] => 1
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [updated] => 2007-04-17 12:15:20
+            [created] => 2007-04-17 12:15:20
+            [name] => Hollywood
+            [password] => 
+            [ispublic] => 
+            [ispermanent] => 2
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [updated] => 2007-04-17 12:15:20
+            [created] => 2007-04-17 12:15:20
+            [name] => Tech Talk
+            [password] => 
+            [ispublic] => 
+            [ispermanent] => 3
+        )
+
+    [3] => Array
+        (
+            [id] => 4
+            [updated] => 2007-04-17 12:15:20
+            [created] => 2007-04-17 12:15:20
+            [name] => Current Events
+            [password] => 
+            [ispublic] => 
+            [ispermanent] => 4
+        )
+
+    [4] => Array
+        (
+            [id] => 6
+            [updated] => 2007-04-17 12:45:09
+            [created] => 2007-04-17 12:45:09
+            [name] => Support Room for w1
+            [password] => 
+            [ispublic] => 
+            [ispermanent] => 
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 07c6d984df0bdfa0a5d10716b8e6273a
+    [2] => 
+    [3] => 
+    [4] => adr
+    [5] => 
+    [6] => 1
+    [7] => The Lounge
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 07c6d984df0bdfa0a5d10716b8e6273a
+    [2] => 
+    [3] => 
+    [4] => adr
+    [5] => 
+    [6] => 2
+    [7] => Hollywood
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 07c6d984df0bdfa0a5d10716b8e6273a
+    [2] => 
+    [3] => 
+    [4] => adr
+    [5] => 
+    [6] => 3
+    [7] => Tech Talk
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 07c6d984df0bdfa0a5d10716b8e6273a
+    [2] => 
+    [3] => 
+    [4] => adr
+    [5] => 
+    [6] => 4
+    [7] => Current Events
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 07c6d984df0bdfa0a5d10716b8e6273a
+    [2] => 
+    [3] => 
+    [4] => adr
+    [5] => 
+    [6] => 6
+    [7] => Support Room for w1
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_rooms WHERE ispublic IS NOT NULL AND ispermanent IS NULL ORDER BY created
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_connections WHERE id<>? AND userid IS NOT NULL
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 07c6d984df0bdfa0a5d10716b8e6273a
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => adu
+    [5] => 3
+    [6] => 1
+    [7] => w21
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => uclc
+    [5] => 3
+    [6] => 
+    [7] => 16777215
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => ustc
+    [5] => 3
+    [6] => 
+    [7] => 1
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_ignors WHERE userid=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 3
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_connections SET updated=NOW(), userid=?, roomid=?, color=?, state=?, start=?, lang=?, ip=?, tzoffset=? WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 3
+    [1] => 1
+    [2] => 16777215
+    [3] => 1
+    [4] => 188
+    [5] => en
+    [6] => 127.0.0.1
+    [7] => -180
+    [8] => 07c6d984df0bdfa0a5d10716b8e6273a
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms,flashchat_connections SET flashchat_rooms.updated=NOW() WHERE flashchat_rooms.id = flashchat_connections.roomid
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id FROM flashchat_rooms WHERE ispermanent IS NULL AND updated < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 30
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_messages WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 86400
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_bans WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 36000
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => spht
+    [5] => 3
+    [6] => 
+    [7] => 
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => spht
+    [5] => 3
+    [6] => 
+    [7] => 
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 1
+    [4] => msg
+    [5] => 3
+    [6] => 1
+    [7] => dy hpo jrthpodrt
+)
+
+//-----------------------------------------------------
+//----id
+//-----------------------------------------------------
+200
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms,flashchat_connections SET flashchat_rooms.updated=NOW() WHERE flashchat_rooms.id = flashchat_connections.roomid
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id FROM flashchat_rooms WHERE ispermanent IS NULL AND updated < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 30
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_messages WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 86400
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_bans WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 36000
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 1
+    [4] => msg
+    [5] => 3
+    [6] => 1
+    [7] => drh dirtjhi odrt
+)
+
+//-----------------------------------------------------
+//----id
+//-----------------------------------------------------
+201
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 1
+    [4] => msg
+    [5] => 3
+    [6] => 1
+    [7] => drt hoidrjthio
+)
+
+//-----------------------------------------------------
+//----id
+//-----------------------------------------------------
+202
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id, ispermanent FROM flashchat_rooms
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [ispermanent] => 1
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [ispermanent] => 2
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [ispermanent] => 3
+        )
+
+    [3] => Array
+        (
+            [id] => 4
+            [ispermanent] => 4
+        )
+
+    [4] => Array
+        (
+            [id] => 6
+            [ispermanent] => 
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 609dc8faaad67a1d9f7cfa2f8a76ffcf
+    [2] => 
+    [3] => 
+    [4] => lout
+    [5] => 
+    [6] => 
+    [7] => login
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_connections (id, updated, created, userid, roomid, color, state, start, lang, ip) VALUES (?, NOW(), NOW(), ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 609dc8faaad67a1d9f7cfa2f8a76ffcf
+    [1] => 
+    [2] => 1
+    [3] => 16777215
+    [4] => 1
+    [5] => 203
+    [6] => en
+    [7] => 127.0.0.1
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_connections SET updated=NOW(), userid=?, roomid=?, color=?, state=?, start=?, lang=?, ip=?, tzoffset=? WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 1
+    [2] => 16777215
+    [3] => 1
+    [4] => 203
+    [5] => en
+    [6] => 127.0.0.1
+    [7] => -180
+    [8] => 609dc8faaad67a1d9f7cfa2f8a76ffcf
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms,flashchat_connections SET flashchat_rooms.updated=NOW() WHERE flashchat_rooms.id = flashchat_connections.roomid
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id FROM flashchat_rooms WHERE ispermanent IS NULL AND updated < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 30
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [id] => 6
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => rmr
+    [5] => 
+    [6] => 6
+    [7] => 
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_rooms WHERE ispermanent IS NULL AND id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 6
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_messages WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 86400
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_bans WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 36000
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_users WHERE login=? LIMIT 1
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => w2
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_users (login, roles) VALUES(?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => w2
+    [1] => 1
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id, ispermanent FROM flashchat_rooms
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [ispermanent] => 1
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [ispermanent] => 2
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [ispermanent] => 3
+        )
+
+    [3] => Array
+        (
+            [id] => 4
+            [ispermanent] => 4
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id, ip FROM flashchat_connections WHERE userid=? AND id<>?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 4
+    [1] => 609dc8faaad67a1d9f7cfa2f8a76ffcf
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT COUNT(*) as cnt FROM flashchat_connections WHERE ip=? AND userid IS NOT NULL
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 127.0.0.1
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [cnt] => 1
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_users WHERE id=? LIMIT 1
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 4
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [id] => 4
+            [login] => w2
+            [password] => 
+            [roles] => 1
+            [profile] => 
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_users WHERE id=? LIMIT 1
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 4
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [id] => 4
+            [login] => w2
+            [password] => 
+            [roles] => 1
+            [profile] => 
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_bans WHERE (banneduserid=? OR ip=?) AND roomid IS NULL
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 4
+    [1] => 127.0.0.1
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_bans WHERE banneduserid=? AND roomid IS NOT NULL
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 4
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_users WHERE id=? LIMIT 1
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 4
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [id] => 4
+            [login] => w2
+            [password] => 
+            [roles] => 1
+            [profile] => 
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 609dc8faaad67a1d9f7cfa2f8a76ffcf
+    [2] => 
+    [3] => 
+    [4] => lng
+    [5] => 
+    [6] => 
+    [7] => <language loaded="1" id="en" name="English"><messages  ignored="'USER_LABEL' is ignoring your messages" banned="You've been banned" login="Please login to the chat" wrongPass="Incorrect user name or password. Please try again." required="required" anotherlogin="Another user is logged in with this user name. Please try again." expiredlogin="Your connection has expired. Please re-login." enterroom="[ROOM_LABEL]: USER_LABEL has entered at TIMESTAMP" leaveroom="[ROOM_LABEL]: USER_LABEL has left at TIMESTAMP" selfenterroom="Welcome! You have entered [ROOM_LABEL] at TIMESTAMP" bellrang="USER_LABEL rang the bell" chatfull="The chat is full. Please try again later." iplimit="You are already in the chat." roomlock="This room is password protected.&lt;br&gt;Please enter the room password:" locked="Invalid password. Please try again." botfeat="The bot feature is not currently enabled." securityrisk="The file that you uploaded may contain scripting elements, which could pose a security risk. Please try another file."/><desktop  invalidsettings="Invalid settings" selectsmile="Smilies" sendBtn="Send" saveBtn="Save" clearBtn="Clear" skinBtn="Options" addRoomBtn="Add" myStatus="My status" room="Room" welcome="Welcome USER_LABEL" ringTheBell="No Answer? Ring The Bell:" logOffBtn="X" helpBtn="?" adminSign=""/><dialog id="misc"  roomnotfound="Room 'ROOM_LABEL' not found" usernotfound="User 'USER_LABEL' not found" unbanned="You were un-banned by user 'USER_LABEL'" banned="You were banned by user 'USER_LABEL'" unignored="You were un-ignored by user 'USER_LABEL'" ignored="You were ignored by user 'USER_LABEL'" invitationdeclined="User 'USER_LABEL' declined your invitation to room 'ROOM_LABEL'" invitationaccepted="User 'USER_LABEL' accepted your invitation to room 'ROOM_LABEL'" roomnotcreated="Room was not created" roomisfull="[ROOM_LABEL] is full. Please choose another room." alert="&lt;b&gt;ALERT!&lt;/b&gt;&lt;br&gt;" chatalert="&lt;b&gt;ALERT!&lt;/b&gt;&lt;br&gt;" gag="&lt;b&gt;You've been gagged for DURATION minute(s)!&lt;/b&gt;&lt;br&gt;&lt;br&gt;You may view messages in this room, but not contribute new messages to the conversation, until the gag expires." ungagged="You were un-gagged by user 'USER_LABEL'" gagconfirm="USER_LABEL is gagged for MINUTES minute(s)." alertconfirm="USER_LABEL has read the alert." file_declined="Your file was declined by USER_LABEL." file_accepted="Your file was accepted by USER_LABEL."/><dialog id="unignore"  unignoreBtn="Un-ignore" unignoretext="Enter un-ignore text"/><dialog id="unban"  unbanBtn="Un-ban" unbantext="Enter un-ban text"/><dialog id="tablabels"  themes="Themes" sounds="Sounds" text="Text" effects="Effects" admin="Admin" about="About"/><dialog id="text"  itemChange="Item to Change" fontSize="Font Size" fontFamily="Font Family" language="Language" mainChat="Main Chat" interfaceElements="Interface Elements" title="Title" mytextcolor="Use my text color for all received messages."/><dialog id="effects"  avatars="Avatars" photo="Photo" mainchat="Main chat" roomlist="Room list" background="Background" custom="Custom" showBackgroundImages="Show background" splashWindow="Focus window on new message" uiAlpha="Transparency"/><dialog id="sound"  sampleBtn="Sample" testBtn="Test" muteall="Mute all" submitmessage="Submit message" reveivemessage="Receive message" enterroom="Enter room" leaveroom="Leave room" pan="Pan" volume="Volume" initiallogin="Initial login" logout="Logout" privatemessagereceived="Receive private message" invitationreceived="Receive invitation" combolistopenclose="Open/close combobox list" userbannedbooted="User banned or booted" usermenumouseover="User menu mouse over" roomopenclose="Open/close room section" popupwindowopen="Popup window opens" popupwindowclosemin="Popup window closes" pressbutton="Key press" otheruserenters="Other user enters room"/><dialog id="skin"  inputBoxBackground="Input box background" privateLogBackground="Private log background" publicLogBackground="Public log background" enterRoomNotify="Enter room notification" roomText="Rooms text" room="Rooms background" userListBackground="User list background" dialogTitle="Dialog title" dialog="Dialog background" buttonText="Buttons text" button="Buttons background" bodyText="Body text" background="Main background" borderColor="Border color" selectskin="Select Color Scheme..." buttonBorder="Buttons border color" selectBigSkin="Select Skin..." titleText="Title text"/><dialog id="privateBox"  sendBtn="Send" toUser="Talking to USER_LABEL:"/><dialog id="login"  loginBtn="Login" language="Language:" moderator="(if moderator)" password="Password:" username="User name:"/><dialog id="invitenotify"  declineBtn="Decline" acceptBtn="Accept" userinvited="'USER_LABEL' has invited you to chat in 'ROOM_LABEL'"/><dialog id="invite"  sendBtn="Send" includemessage="Include this message with your invitation:" inviteto="Invite user to:"/><dialog id="ignore"  ignoreBtn="Ignore" ignoretext="Enter ignore text"/><dialog id="createroom"  createBtn="Create" private="Private" public="Public" entername="Enter room name" enterpass="Enter a room password or leave blank to allow access without password."/><dialog id="ban"  banBtn="Ban" byIP="by IP" fromChat="from chat" fromRoom="from room" banText="Enter ban text"/><dialog id="common"  cancelBtn="Cancel" okBtn="OK" win_choose="Choose the file to upload:" win_upl_btn="  Upload  " upl_error="File uploading error" pls_select_file="Please select a file to upload" ext_not_allowed="The FILE_EXT file extension is not allowed. Please choose a file with one of the these extensions: ALLOWED_EXT" size_too_big="The file that you have attempted to share exceeds the maximum allowed file size. Please try again."/><dialog id="sharefile"  chat_users="[ Share To Chat ]" all_users="[ Share To Room ]" file_info_size="&lt;br&gt;The maximum allowed size of this file MAX_SIZE." file_info_ext=" Allowed File Types: ALLOWED_EXT" win_share_only="Share with" usr_message="&lt;b&gt;USER_LABEL wants to share a file with you&lt;/b&gt;&lt;br&gt;&lt;br&gt;File name: F_NAME&lt;br&gt;File size: F_SIZE"/><dialog id="loadavatarbg"  win_title="Custom Background" file_info="Your file should be a non-progressive JPG image." use_label="Use this file for:" rb_mainchat_avatar="Main chat avatar only" rb_roomlist_avatar="Room list avatar only" rb_mc_rl_avatar="Both main chat and room list avatars" rb_this_theme="Background for this theme only" rb_all_themes="Background for all themes"/><dialog id="loadphoto"  win_title="Custom User Photo" file_info="Your file should be a non-progressive JPG image, GIF image, PNG image."/><status  here="Here" busy="Busy" away="Away" brb="BRB"/><usermenu  profile="Profile" unban="Un-ban" ban="Ban" unignore="Un-ignore" fileshare="Share File" ignore="Ignore" invite="Invite" privatemessage="Private message"/></language>
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 609dc8faaad67a1d9f7cfa2f8a76ffcf
+    [2] => 
+    [3] => 
+    [4] => lin
+    [5] => 4
+    [6] => 1
+    [7] => en
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_rooms WHERE ispublic IS NOT NULL AND ispermanent IS NOT NULL ORDER BY ispermanent
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [id] => 1
+            [updated] => 2007-04-17 12:15:20
+            [created] => 2007-04-17 12:15:20
+            [name] => The Lounge
+            [password] => 
+            [ispublic] => 
+            [ispermanent] => 1
+        )
+
+    [1] => Array
+        (
+            [id] => 2
+            [updated] => 2007-04-17 12:15:20
+            [created] => 2007-04-17 12:15:20
+            [name] => Hollywood
+            [password] => 
+            [ispublic] => 
+            [ispermanent] => 2
+        )
+
+    [2] => Array
+        (
+            [id] => 3
+            [updated] => 2007-04-17 12:15:20
+            [created] => 2007-04-17 12:15:20
+            [name] => Tech Talk
+            [password] => 
+            [ispublic] => 
+            [ispermanent] => 3
+        )
+
+    [3] => Array
+        (
+            [id] => 4
+            [updated] => 2007-04-17 12:15:20
+            [created] => 2007-04-17 12:15:20
+            [name] => Current Events
+            [password] => 
+            [ispublic] => 
+            [ispermanent] => 4
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 609dc8faaad67a1d9f7cfa2f8a76ffcf
+    [2] => 
+    [3] => 
+    [4] => adr
+    [5] => 
+    [6] => 1
+    [7] => The Lounge
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 609dc8faaad67a1d9f7cfa2f8a76ffcf
+    [2] => 
+    [3] => 
+    [4] => adr
+    [5] => 
+    [6] => 2
+    [7] => Hollywood
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 609dc8faaad67a1d9f7cfa2f8a76ffcf
+    [2] => 
+    [3] => 
+    [4] => adr
+    [5] => 
+    [6] => 3
+    [7] => Tech Talk
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 609dc8faaad67a1d9f7cfa2f8a76ffcf
+    [2] => 
+    [3] => 
+    [4] => adr
+    [5] => 
+    [6] => 4
+    [7] => Current Events
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_rooms WHERE ispublic IS NOT NULL AND ispermanent IS NULL ORDER BY created
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_connections WHERE id<>? AND userid IS NOT NULL
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 609dc8faaad67a1d9f7cfa2f8a76ffcf
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [11] => 1
+
+            [id] => 07c6d984df0bdfa0a5d10716b8e6273a
+            [updated] => 2007-04-17 12:45:49
+            [created] => 2007-04-17 12:45:04
+            [userid] => 3
+            [roomid] => 1
+            [color] => 16777215
+            [state] => 1
+            [start] => 188
+            [lang] => en
+            [ip] => 127.0.0.1
+            [tzset] => -180
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 609dc8faaad67a1d9f7cfa2f8a76ffcf
+    [2] => 
+    [3] => 
+    [4] => adu2
+    [5] => 3
+    [6] => 1
+    [7] => w21
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 609dc8faaad67a1d9f7cfa2f8a76ffcf
+    [2] => 
+    [3] => 
+    [4] => uclc
+    [5] => 3
+    [6] => 
+    [7] => 16777215
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 609dc8faaad67a1d9f7cfa2f8a76ffcf
+    [2] => 
+    [3] => 
+    [4] => ustc
+    [5] => 3
+    [6] => 
+    [7] => 1
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => adu
+    [5] => 4
+    [6] => 1
+    [7] => w2
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => uclc
+    [5] => 4
+    [6] => 
+    [7] => 16777215
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => ustc
+    [5] => 4
+    [6] => 
+    [7] => 1
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_ignors WHERE userid=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 4
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_connections SET updated=NOW(), userid=?, roomid=?, color=?, state=?, start=?, lang=?, ip=?, tzoffset=? WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 4
+    [1] => 1
+    [2] => 16777215
+    [3] => 1
+    [4] => 205
+    [5] => en
+    [6] => 127.0.0.1
+    [7] => -180
+    [8] => 609dc8faaad67a1d9f7cfa2f8a76ffcf
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms,flashchat_connections SET flashchat_rooms.updated=NOW() WHERE flashchat_rooms.id = flashchat_connections.roomid
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id FROM flashchat_rooms WHERE ispermanent IS NULL AND updated < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 30
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_messages WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 86400
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_bans WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 36000
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => spht
+    [5] => 3
+    [6] => 
+    [7] => 
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => spht
+    [5] => 4
+    [6] => 
+    [7] => 
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => uclc
+    [5] => 4
+    [6] => 
+    [7] => 16777215
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_connections SET updated=NOW(), userid=?, roomid=?, color=?, state=?, start=?, lang=?, ip=?, tzoffset=? WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 4
+    [1] => 1
+    [2] => 16777215
+    [3] => 1
+    [4] => 205
+    [5] => en
+    [6] => 127.0.0.1
+    [7] => -180
+    [8] => 609dc8faaad67a1d9f7cfa2f8a76ffcf
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => spht
+    [5] => 4
+    [6] => 
+    [7] => 
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => spht
+    [5] => 4
+    [6] => 
+    [7] => 
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 1
+    [4] => msg
+    [5] => 4
+    [6] => 1
+    [7] => rj dstjgsopirt
+)
+
+//-----------------------------------------------------
+//----id
+//-----------------------------------------------------
+222
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 1
+    [4] => msg
+    [5] => 4
+    [6] => 1
+    [7] => ser gsoiejrgoi sjer
+)
+
+//-----------------------------------------------------
+//----id
+//-----------------------------------------------------
+223
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 1
+    [4] => msg
+    [5] => 4
+    [6] => 1
+    [7] => s gseorij gser
+)
+
+//-----------------------------------------------------
+//----id
+//-----------------------------------------------------
+224
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms,flashchat_connections SET flashchat_rooms.updated=NOW() WHERE flashchat_rooms.id = flashchat_connections.roomid
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id FROM flashchat_rooms WHERE ispermanent IS NULL AND updated < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 30
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_messages WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 86400
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_bans WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 36000
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 1
+    [4] => msg
+    [5] => 4
+    [6] => 1
+    [7] => ser gsoierj goiser
+)
+
+//-----------------------------------------------------
+//----id
+//-----------------------------------------------------
+225
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 1
+    [4] => msg
+    [5] => 4
+    [6] => 1
+    [7] => ser goisjeopg
+)
+
+//-----------------------------------------------------
+//----id
+//-----------------------------------------------------
+226
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 1
+    [4] => msg
+    [5] => 4
+    [6] => 1
+    [7] => erg seroijg serg osierj gopis
+)
+
+//-----------------------------------------------------
+//----id
+//-----------------------------------------------------
+227
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms,flashchat_connections SET flashchat_rooms.updated=NOW() WHERE flashchat_rooms.id = flashchat_connections.roomid
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id FROM flashchat_rooms WHERE ispermanent IS NULL AND updated < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 30
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_messages WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 86400
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_bans WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 36000
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 1
+    [4] => msg
+    [5] => 4
+    [6] => 1
+    [7] => re goisejrpo gijser
+)
+
+//-----------------------------------------------------
+//----id
+//-----------------------------------------------------
+228
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 1
+    [4] => msg
+    [5] => 4
+    [6] => 1
+    [7] => oesijg oiresj gioserj gpose
+)
+
+//-----------------------------------------------------
+//----id
+//-----------------------------------------------------
+229
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 1
+    [4] => msg
+    [5] => 4
+    [6] => 1
+    [7] => ser goijseoigj osiejrgp ser
+)
+
+//-----------------------------------------------------
+//----id
+//-----------------------------------------------------
+230
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms,flashchat_connections SET flashchat_rooms.updated=NOW() WHERE flashchat_rooms.id = flashchat_connections.roomid
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id FROM flashchat_rooms WHERE ispermanent IS NULL AND updated < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 30
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_messages WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 86400
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_bans WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 36000
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 1
+    [4] => msg
+    [5] => 4
+    [6] => 1
+    [7] => serg ioserh pghips oerihg oisehgpoisehr giohserh pogih sepoighseoirg oiserpghserg
+)
+
+//-----------------------------------------------------
+//----id
+//-----------------------------------------------------
+231
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms,flashchat_connections SET flashchat_rooms.updated=NOW() WHERE flashchat_rooms.id = flashchat_connections.roomid
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id FROM flashchat_rooms WHERE ispermanent IS NULL AND updated < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 30
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_messages WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 86400
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_bans WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 36000
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 1
+    [4] => msg
+    [5] => 4
+    [6] => 1
+    [7] => ser&lt;br&gt;g sergoiserg
+)
+
+//-----------------------------------------------------
+//----id
+//-----------------------------------------------------
+232
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 1
+    [4] => msg
+    [5] => 4
+    [6] => 1
+    [7] => erg&lt;br&gt; ser s
+)
+
+//-----------------------------------------------------
+//----id
+//-----------------------------------------------------
+233
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 1
+    [4] => msg
+    [5] => 4
+    [6] => 1
+    [7] => er ser gser
+)
+
+//-----------------------------------------------------
+//----id
+//-----------------------------------------------------
+234
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_bans WHERE banneduserid=? AND roomid=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 4
+    [1] => 3
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_rooms WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 3
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => mvu
+    [5] => 4
+    [6] => 3
+    [7] => 
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_connections SET updated=NOW(), userid=?, roomid=?, color=?, state=?, start=?, lang=?, ip=?, tzoffset=? WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 4
+    [1] => 3
+    [2] => 16777215
+    [3] => 1
+    [4] => 205
+    [5] => en
+    [6] => 127.0.0.1
+    [7] => -180
+    [8] => 609dc8faaad67a1d9f7cfa2f8a76ffcf
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms,flashchat_connections SET flashchat_rooms.updated=NOW() WHERE flashchat_rooms.id = flashchat_connections.roomid
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id FROM flashchat_rooms WHERE ispermanent IS NULL AND updated < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 30
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_messages WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 86400
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_bans WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 36000
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_bans WHERE banneduserid=? AND roomid=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 3
+    [1] => 4
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_rooms WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 4
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => mvu
+    [5] => 3
+    [6] => 4
+    [7] => 
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_connections SET updated=NOW(), userid=?, roomid=?, color=?, state=?, start=?, lang=?, ip=?, tzoffset=? WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 3
+    [1] => 4
+    [2] => 16777215
+    [3] => 1
+    [4] => 188
+    [5] => en
+    [6] => 127.0.0.1
+    [7] => -180
+    [8] => 07c6d984df0bdfa0a5d10716b8e6273a
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms,flashchat_connections SET flashchat_rooms.updated=NOW() WHERE flashchat_rooms.id = flashchat_connections.roomid
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id FROM flashchat_rooms WHERE ispermanent IS NULL AND updated < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 30
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_messages WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 86400
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_bans WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 36000
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_bans WHERE banneduserid=? AND roomid=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 4
+    [1] => 2
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_rooms WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 2
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => mvu
+    [5] => 4
+    [6] => 2
+    [7] => 
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_connections SET updated=NOW(), userid=?, roomid=?, color=?, state=?, start=?, lang=?, ip=?, tzoffset=? WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 4
+    [1] => 2
+    [2] => 16777215
+    [3] => 1
+    [4] => 205
+    [5] => en
+    [6] => 127.0.0.1
+    [7] => -180
+    [8] => 609dc8faaad67a1d9f7cfa2f8a76ffcf
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms,flashchat_connections SET flashchat_rooms.updated=NOW() WHERE flashchat_rooms.id = flashchat_connections.roomid
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id FROM flashchat_rooms WHERE ispermanent IS NULL AND updated < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 30
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_messages WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 86400
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_bans WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 36000
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_bans WHERE banneduserid=? AND roomid=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 3
+    [1] => 1
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_rooms WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 1
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => mvu
+    [5] => 3
+    [6] => 1
+    [7] => 
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_connections SET updated=NOW(), userid=?, roomid=?, color=?, state=?, start=?, lang=?, ip=?, tzoffset=? WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 3
+    [1] => 1
+    [2] => 16777215
+    [3] => 1
+    [4] => 188
+    [5] => en
+    [6] => 127.0.0.1
+    [7] => -180
+    [8] => 07c6d984df0bdfa0a5d10716b8e6273a
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms,flashchat_connections SET flashchat_rooms.updated=NOW() WHERE flashchat_rooms.id = flashchat_connections.roomid
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id FROM flashchat_rooms WHERE ispermanent IS NULL AND updated < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 30
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_messages WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 86400
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_bans WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 36000
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_bans WHERE banneduserid=? AND roomid=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 3
+    [1] => 3
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_rooms WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 3
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => mvu
+    [5] => 3
+    [6] => 3
+    [7] => 
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_connections SET updated=NOW(), userid=?, roomid=?, color=?, state=?, start=?, lang=?, ip=?, tzoffset=? WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 3
+    [1] => 3
+    [2] => 16777215
+    [3] => 1
+    [4] => 188
+    [5] => en
+    [6] => 127.0.0.1
+    [7] => -180
+    [8] => 07c6d984df0bdfa0a5d10716b8e6273a
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms,flashchat_connections SET flashchat_rooms.updated=NOW() WHERE flashchat_rooms.id = flashchat_connections.roomid
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id FROM flashchat_rooms WHERE ispermanent IS NULL AND updated < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 30
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_messages WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 86400
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_bans WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 36000
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_bans WHERE banneduserid=? AND roomid=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 4
+    [1] => 4
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_rooms WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 4
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 
+    [4] => mvu
+    [5] => 4
+    [6] => 4
+    [7] => 
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_connections SET updated=NOW(), userid=?, roomid=?, color=?, state=?, start=?, lang=?, ip=?, tzoffset=? WHERE id=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 4
+    [1] => 4
+    [2] => 16777215
+    [3] => 1
+    [4] => 205
+    [5] => en
+    [6] => 127.0.0.1
+    [7] => -180
+    [8] => 609dc8faaad67a1d9f7cfa2f8a76ffcf
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 609dc8faaad67a1d9f7cfa2f8a76ffcf
+    [2] => 
+    [3] => 
+    [4] => back
+    [5] => 
+    [6] => 12
+    [7] => 
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT count(*) AS numb FROM flashchat_messages WHERE command='msg' AND toroomid=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 4
+)
+
+//-----------------------------------------------------
+//----entry_elems
+//-----------------------------------------------------
+Array
+(
+    [0] => 1
+    [1] => 1
+    [2] => 112
+    [3] => 324
+    [4] => 1176801882
+    [5] => 0435456897.txt
+)
+
+//-----------------------------------------------------
+//----entry_elems
+//-----------------------------------------------------
+Array
+(
+    [0] => 1
+    [1] => 3
+    [2] => 202
+    [3] => 85
+    [4] => 1176803155
+    [5] => 0435456897.txt
+)
+
+//-----------------------------------------------------
+//----entry_elems
+//-----------------------------------------------------
+Array
+(
+    [0] => 1
+    [1] => 4
+    [2] => 234
+    [3] => 637
+    [4] => 1176803186
+    [5] => 0435456897.txt
+)
+
+//-----------------------------------------------------
+//----entry_elems
+//-----------------------------------------------------
+Array
+(
+    [0] => 5
+    [1] => 1
+    [2] => 137
+    [3] => 1139
+    [4] => 1176801921
+    [5] => 0435456897.txt
+)
+
+//-----------------------------------------------------
+//----entry_elems
+//-----------------------------------------------------
+Array
+(
+    [0] => 5
+    [1] => 2
+    [2] => 51
+    [3] => 121
+    [4] => 1176801392
+    [5] => 0435456897.txt
+)
+
+//-----------------------------------------------------
+//----entry_elems
+//-----------------------------------------------------
+Array
+(
+    [0] => 6
+    [1] => 2
+    [2] => 185
+    [3] => 411
+    [4] => 1176803128
+    [5] => 0435456897.txt
+)
+
+//-----------------------------------------------------
+//----entry_elems
+//-----------------------------------------------------
+Array
+(
+    [0] => flashchat
+    [1] => messages
+    [2] => 241
+    [3] => 67108
+    [4] => 0435456897.txt
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id FROM flashchat_messages WHERE command='msg' AND toroomid=? ORDER BY id DESC LIMIT -1, 1
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 4
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [id] => 
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_messages WHERE command='msg' AND id>=? AND id<=? AND toroomid=? ORDER BY id
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 241
+    [2] => 4
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms,flashchat_connections SET flashchat_rooms.updated=NOW() WHERE flashchat_rooms.id = flashchat_connections.roomid
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id FROM flashchat_rooms WHERE ispermanent IS NULL AND updated < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 30
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_messages WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 86400
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_bans WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 36000
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 4
+    [4] => msg
+    [5] => 4
+    [6] => 4
+    [7] => dif giosdfhg opiesr
+)
+
+//-----------------------------------------------------
+//----id
+//-----------------------------------------------------
+242
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms,flashchat_connections SET flashchat_rooms.updated=NOW() WHERE flashchat_rooms.id = flashchat_connections.roomid
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id FROM flashchat_rooms WHERE ispermanent IS NULL AND updated < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 30
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_messages WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 86400
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_bans WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 36000
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 
+    [2] => 
+    [3] => 4
+    [4] => msg
+    [5] => 4
+    [6] => 4
+    [7] => eg oise hopgie
+)
+
+//-----------------------------------------------------
+//----id
+//-----------------------------------------------------
+243
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 609dc8faaad67a1d9f7cfa2f8a76ffcf
+    [2] => 
+    [3] => 
+    [4] => back
+    [5] => 
+    [6] => 2
+    [7] => 
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT count(*) AS numb FROM flashchat_messages WHERE command='msg' AND toroomid=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 4
+)
+
+//-----------------------------------------------------
+//----entry_elems
+//-----------------------------------------------------
+Array
+(
+    [0] => 1
+    [1] => 1
+    [2] => 112
+    [3] => 324
+    [4] => 1176801882
+    [5] => 0435456897.txt
+)
+
+//-----------------------------------------------------
+//----entry_elems
+//-----------------------------------------------------
+Array
+(
+    [0] => 1
+    [1] => 3
+    [2] => 202
+    [3] => 85
+    [4] => 1176803155
+    [5] => 0435456897.txt
+)
+
+//-----------------------------------------------------
+//----entry_elems
+//-----------------------------------------------------
+Array
+(
+    [0] => 1
+    [1] => 4
+    [2] => 234
+    [3] => 637
+    [4] => 1176803186
+    [5] => 0435456897.txt
+)
+
+//-----------------------------------------------------
+//----entry_elems
+//-----------------------------------------------------
+Array
+(
+    [0] => 4
+    [1] => 4
+    [2] => 243
+    [3] => 45
+    [4] => 1176803284
+    [5] => 0435456897.txt
+)
+
+//-----------------------------------------------------
+//----entry_elems
+//-----------------------------------------------------
+Array
+(
+    [0] => 5
+    [1] => 1
+    [2] => 137
+    [3] => 1139
+    [4] => 1176801921
+    [5] => 0435456897.txt
+)
+
+//-----------------------------------------------------
+//----entry_elems
+//-----------------------------------------------------
+Array
+(
+    [0] => 5
+    [1] => 2
+    [2] => 51
+    [3] => 121
+    [4] => 1176801392
+    [5] => 0435456897.txt
+)
+
+//-----------------------------------------------------
+//----entry_elems
+//-----------------------------------------------------
+Array
+(
+    [0] => 6
+    [1] => 2
+    [2] => 185
+    [3] => 411
+    [4] => 1176803128
+    [5] => 0435456897.txt
+)
+
+//-----------------------------------------------------
+//----entry_elems
+//-----------------------------------------------------
+Array
+(
+    [0] => flashchat
+    [1] => messages
+    [2] => 244
+    [3] => 67186
+    [4] => 0435456897.txt
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id FROM flashchat_messages WHERE command='msg' AND toroomid=? ORDER BY id DESC LIMIT 1, 1
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 4
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [id] => 242
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_messages WHERE command='msg' AND id>=? AND id<=? AND toroomid=? ORDER BY id
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 242
+    [1] => 244
+    [2] => 4
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [id] => 242
+            [created] => 2007-04-17 12:48
+            [toroomid] => 4
+            [command] => msg
+            [userid] => 4
+            [roomid] => 4
+            [txt] => dif giosdfhg opiesr
+        )
+
+    [1] => Array
+        (
+            [id] => 243
+            [created] => 2007-04-17 12:48
+            [toroomid] => 4
+            [command] => msg
+            [userid] => 4
+            [roomid] => 4
+            [txt] => eg oise hopgie
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 2007-04-17 12:48
+    [1] => 609dc8faaad67a1d9f7cfa2f8a76ffcf
+    [2] => 
+    [3] => 
+    [4] => msgb
+    [5] => 4
+    [6] => 4
+    [7] => dif giosdfhg opiesr
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 2007-04-17 12:48
+    [1] => 609dc8faaad67a1d9f7cfa2f8a76ffcf
+    [2] => 
+    [3] => 
+    [4] => msgb
+    [5] => 4
+    [6] => 4
+    [7] => eg oise hopgie
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+UPDATE flashchat_rooms,flashchat_connections SET flashchat_rooms.updated=NOW() WHERE flashchat_rooms.id = flashchat_connections.roomid
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id FROM flashchat_rooms WHERE ispermanent IS NULL AND updated < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 30
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_messages WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 86400
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+DELETE FROM flashchat_bans WHERE created < DATE_SUB(NOW(),INTERVAL ? SECOND)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 36000
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+INSERT INTO flashchat_messages (created, toconnid, touserid, toroomid, command, userid, roomid, txt) VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 609dc8faaad67a1d9f7cfa2f8a76ffcf
+    [2] => 
+    [3] => 
+    [4] => back
+    [5] => 
+    [6] => 30
+    [7] => 
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT count(*) AS numb FROM flashchat_messages WHERE command='msg' AND toroomid=?
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 4
+)
+
+//-----------------------------------------------------
+//----entry_elems
+//-----------------------------------------------------
+Array
+(
+    [0] => 1
+    [1] => 1
+    [2] => 112
+    [3] => 324
+    [4] => 1176801882
+    [5] => 0435456897.txt
+)
+
+//-----------------------------------------------------
+//----entry_elems
+//-----------------------------------------------------
+Array
+(
+    [0] => 1
+    [1] => 3
+    [2] => 202
+    [3] => 85
+    [4] => 1176803155
+    [5] => 0435456897.txt
+)
+
+//-----------------------------------------------------
+//----entry_elems
+//-----------------------------------------------------
+Array
+(
+    [0] => 1
+    [1] => 4
+    [2] => 234
+    [3] => 637
+    [4] => 1176803186
+    [5] => 0435456897.txt
+)
+
+//-----------------------------------------------------
+//----entry_elems
+//-----------------------------------------------------
+Array
+(
+    [0] => 4
+    [1] => 4
+    [2] => 243
+    [3] => 45
+    [4] => 1176803284
+    [5] => 0435456897.txt
+)
+
+//-----------------------------------------------------
+//----entry_elems
+//-----------------------------------------------------
+Array
+(
+    [0] => 5
+    [1] => 1
+    [2] => 137
+    [3] => 1139
+    [4] => 1176801921
+    [5] => 0435456897.txt
+)
+
+//-----------------------------------------------------
+//----entry_elems
+//-----------------------------------------------------
+Array
+(
+    [0] => 5
+    [1] => 2
+    [2] => 51
+    [3] => 121
+    [4] => 1176801392
+    [5] => 0435456897.txt
+)
+
+//-----------------------------------------------------
+//----entry_elems
+//-----------------------------------------------------
+Array
+(
+    [0] => 6
+    [1] => 2
+    [2] => 185
+    [3] => 411
+    [4] => 1176803128
+    [5] => 0435456897.txt
+)
+
+//-----------------------------------------------------
+//----entry_elems
+//-----------------------------------------------------
+Array
+(
+    [0] => flashchat
+    [1] => messages
+    [2] => 247
+    [3] => 67452
+    [4] => 0435456897.txt
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT id FROM flashchat_messages WHERE command='msg' AND toroomid=? ORDER BY id DESC LIMIT 2, 1
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 4
+)
+
+//-----------------------------------------------------
+//----this result
+//-----------------------------------------------------
+Array
+(
+    [0] => Array
+        (
+            [id] => 
+        )
+
+)
+
+//-----------------------------------------------------
+//----this
+//-----------------------------------------------------
+SELECT * FROM flashchat_messages WHERE command='msg' AND id>=? AND id<=? AND toroomid=? ORDER BY id
+//-----------------------------------------------------
+//----params
+//-----------------------------------------------------
+Array
+(
+    [0] => 
+    [1] => 247
+    [2] => 4
+)

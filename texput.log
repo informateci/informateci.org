@@ -1,0 +1,21 @@
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (TeX Live 2012/Debian) (format=latex 2013.11.15)  12 DEC 2013 15:02
+entering extended mode
+ restricted \write18 enabled.
+ %&-line parsing enabled.
+**deb886a4889675f6c5ac22873f9b18a0.tex
+
+! Emergency stop.
+<*> deb886a4889675f6c5ac22873f9b18a0.tex
+                                        
+*** (job aborted, file error in nonstop mode)
+
+ 
+Here is how much of TeX's memory you used:
+ 3 strings out of 495060
+ 133 string characters out of 3182052
+ 45057 words of memory out of 3000000
+ 3288 multiletter control sequences out of 15000+200000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 0i,0n,0p,1b,6s stack positions out of 5000i,500n,10000p,200000b,50000s
+No pages of output.

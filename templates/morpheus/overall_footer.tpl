@@ -1,0 +1,39 @@
+<!-- INCLUDE overall_inc_footer.tpl -->
+</table>
+
+{TPL_CONTENT_BOTTOMNAV1}<table width="100%" cellspacing="0" cellpadding="0" border="0">
+<tr>
+	<td class="navbar-links" align="left">&nbsp;</td>
+	<td class="navbar-text" align="right">&nbsp;</td>
+</tr>
+</table>{TPL_CONTENT_BOTTOMNAV2}
+{TPL_CONTENT_TOP_NOPADDING}
+<div style="text-align:center;">
+<span class="generation"><b>{LOFI}</b></span><br />
+<div class="copyright" style="float:left;padding-left:2px;display:inline;">Powered by <a href="http://www.icyphoenix.com/" target="_blank">Icy Phoenix</a> based on <a href="http://www.phpbb.com/" target="_blank">phpBB</a>{TRANSLATION_INFO}</div>
+{TEMPLATE_COPYRIGHT_LINK}<br />
+<!-- IF S_GENERATION_TIME -->
+<div class="generation">{PAGE_GEN_TIME} <b>{GENERATION_TIME}s</b> (PHP: {PHP_PART}% SQL: {SQL_PART}%){MEMORY_USAGE}<br />{SQL_QUERIES}: {NUMBER_QUERIES} - {DEBUG_TEXT} - {GZIP_TEXT}</div>
+<!-- ENDIF -->
+</div>
+{TPL_CONTENT_BOTTOM}</table>
+</div>
+
+{BOTTOM_HTML_BLOCK}
+<span><a name="bottom"></a></span>
+<!-- IF not S_BOT -->{RUN_CRON_TASK}<!-- ENDIF -->
+
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-2401654-7");
+pageTracker._trackPageview();
+} 
+catch(err) {
+}
+</script>
+</body>
+</html>
